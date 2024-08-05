@@ -149,20 +149,22 @@ function scripts() {
 
 // Сжатие изображений
 function img() {
-  return gulp
-    .src(paths.images.src)
-    .pipe(newer(paths.images.dest))
-    .pipe(
-      imagemin({
-        progressive: true,
-      })
-    )
-    .pipe(
-      size({
-        showFiles: true,
-      })
-    )
-    .pipe(gulp.dest(paths.images.dest));
+  return (
+    gulp
+      .src(paths.images.src)
+      .pipe(newer(paths.images.dest))
+      // .pipe(
+      //   imagemin({
+      //     progressive: true,
+      //   })
+      // )
+      .pipe(
+        size({
+          showFiles: true,
+        })
+      )
+      .pipe(gulp.dest(paths.images.dest))
+  );
 }
 
 // Отслеживание изменений в файлах и запуск лайв сервера

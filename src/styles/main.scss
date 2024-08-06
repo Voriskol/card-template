@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova_regular.ttf");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+}
+
+// Colors
+
+$black: rgba(0, 0, 0, 0.8);
+$gray-40: rgba(0, 0, 0, 0.4);
+$gray-60: rgba(0, 0, 0, 0.6);
+$gray-10: rgba(0, 0, 0, 0.1);
+$blue: #3498db;
+$green: #62b435;
+$red: #f64747;
+$footer: #f0f1f266;
+
+// Основные стили
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #8d8b8b;
+}
+.card {
+  max-width: 768px;
+  max-height: 354px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.card-wrapper {
+  padding: 24px 24px 0 24px;
+}
+
+// Card's header
+.card__header {
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 23px;
+}
+.player__info {
+  display: flex;
+  gap: 12px;
+}
+.player__info__avatar {
+  max-width: 32px;
+  max-height: 32px;
+  border-radius: 50%;
+}
+
+.name {
+  color: $black;
+}
+.description {
+  font-weight: 400;
+  color: $gray-40;
+}
+
+// Table styles
+table {
+  border-collapse: separate;
+  border-spacing: 12px 0;
+}
+
+th,
+td {
+  width: 64px;
+  text-align: start;
+  font-size: 14px;
+}
+th {
+  border-bottom: 1px solid $gray-10;
+}
+
+td {
+  font-weight: bold;
+}
+
+.plus,
+#plus__value {
+  color: $green;
+}
+.equal,
+#equal__value {
+  color: $gray-40;
+}
+.minus,
+#minus__value {
+  color: $red;
+}
+.roi,
+.profit {
+  font-size: 12px;
+  color: $black;
+  font-weight: 400;
+}
+.roi {
+  text-transform: uppercase;
+}
+#roi__value {
+  color: $green;
+}
+#profit__value {
+  color: $green;
+}
+
+// Card's body
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  color: $gray-60;
+  font-size: 16px;
+}
+.card__text {
+  height: 99px;
+  overflow: hidden;
+}
+
+.card__button {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 10px 0px #c2c1c1;
+  width: 40px;
+  height: 40px;
+}
+
+// Card's footer
+.card__footer {
+  background-color: $footer;
+}
+.bet {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  margin-bottom: 16px;
+  border-left: 3px solid $blue;
+}
+
+.bet__title__forecast {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: $gray-40;
+  font-weight: 600;
+}
+
+.bet__title__description {
+  font-size: 18px;
+  font-weight: 600;
+  color: $black;
+}
+
+.bet__info {
+  display: flex;
+  align-items: center;
+}
+.bet__logo {
+  margin-right: 12px;
+  max-width: 32px;
+}
+.bet__ratio {
+  margin-right: 16px;
+}
+.bet__ratio__title {
+  font-size: 12px;
+  color: $black;
+  font-weight: 400;
+}
+.bet__ratio__value {
+  font-size: 20px;
+  color: $black;
+  font-weight: 600;
+}
+.bet__button {
+  width: 140px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: $blue;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Wix Madefor Text";
+}

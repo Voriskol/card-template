@@ -52,8 +52,11 @@ $green: #62b435;
 $red: #f64747;
 $footer: #eff0f0;
 
-// Основные стили
+main {
+  margin-top: 50px;
+}
 
+// Основные стили
 .card {
   max-width: 744px;
   max-height: 100%;

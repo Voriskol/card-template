@@ -55,7 +55,7 @@ $footer: #eff0f0;
 // Основные стили
 
 .card {
-  max-width: 768px;
+  max-width: 744px;
   max-height: 100%;
   background-color: #fff;
   border-radius: 8px;
@@ -97,6 +97,10 @@ $footer: #eff0f0;
 table {
   border-collapse: separate;
   border-spacing: 12px 0;
+}
+
+table span {
+  display: none;
 }
 
 th,
@@ -184,15 +188,11 @@ td {
   border-radius: 50%;
   background-color: white;
   border: none;
-  box-shadow: 0px 0px 10px 0px #c2c1c1;
+  box-shadow: 0px 3px 6px 0px #c2c1c1;
   width: 40px;
   height: 40px;
   cursor: pointer;
   transition: all 0.5s;
-
-  &:hover {
-    background-color: rgb(232, 230, 230);
-  }
 }
 
 .card__button__arrow {
@@ -216,11 +216,16 @@ td {
   background-color: $footer;
 }
 
+.bet__title {
+  width: 400px;
+}
+
 .bet__title__forecast {
   text-transform: uppercase;
   font-size: 12px;
   color: $gray-40;
   font-weight: 600;
+  padding-bottom: 4px;
 }
 
 .bet__title__description {
@@ -244,6 +249,10 @@ td {
   font-size: 12px;
   color: $black;
   font-weight: 400;
+
+  .short {
+    display: none;
+  }
 }
 .bet__ratio__value {
   font-size: 20px;
@@ -284,5 +293,121 @@ td {
   &:hover {
     background: none;
     color: black;
+  }
+}
+
+@media (max-width: 743px) {
+  .card {
+    width: 351px;
+  }
+
+  .card__text--full {
+    height: 370px;
+  }
+
+  .description span {
+    display: none;
+  }
+
+  table {
+    width: 86%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  td span {
+    color: $gray-40;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  #plus__value {
+    width: 35px;
+  }
+
+  #equal__value {
+    width: 30px;
+  }
+
+  #minus__value {
+    width: 35px;
+  }
+  #roi__value {
+    width: 106px;
+    color: $black;
+
+    span {
+      color: $black;
+    }
+  }
+
+  #profit__value {
+    width: 54px;
+  }
+
+  table span {
+    display: inline;
+  }
+
+  .player {
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 14px;
+  }
+
+  .player__info__text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .player__stats {
+    position: relative;
+    top: -13px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+
+  .bet__title {
+    width: 190px;
+  }
+
+  .bet__title__description {
+    font-size: 16px;
+  }
+
+  .bet__ratio__title {
+    .full {
+      display: none;
+    }
+    .short {
+      display: inline;
+    }
+  }
+
+  .bet__info {
+    align-items: flex-end;
+  }
+
+  .bet__ratio {
+    margin-right: 0;
+  }
+
+  .bet__logo {
+    padding-bottom: 3px;
+  }
+
+  .bet__ratio__value {
+    font-size: 18px;
+  }
+
+  .bet__button {
+    margin-top: 16px;
+    width: 100%;
   }
 }
